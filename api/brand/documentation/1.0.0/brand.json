@@ -528,9 +528,6 @@
           "slug": {
             "type": "uid"
           },
-          "svgIcon": {
-            "type": "string"
-          },
           "products": {
             "type": "array",
             "items": {
@@ -562,7 +559,10 @@
               }
             }
           },
-          "imgIcon": {
+          "iconSvg": {
+            "type": "string"
+          },
+          "iconImg": {
             "required": [
               "id",
               "name",
@@ -643,14 +643,14 @@
           "slug": {
             "type": "uid"
           },
-          "svgIcon": {
-            "type": "string"
-          },
           "products": {
             "type": "array",
             "items": {
               "type": "string"
             }
+          },
+          "iconSvg": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",

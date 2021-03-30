@@ -542,16 +542,16 @@
               "slug": {
                 "type": "uid"
               },
-              "svgIcon": {
-                "type": "string"
-              },
               "products": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "imgIcon": {
+              "iconSvg": {
+                "type": "string"
+              },
+              "iconImg": {
                 "type": "string"
               },
               "published_at": {

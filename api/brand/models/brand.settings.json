@@ -18,14 +18,14 @@
       "type": "uid",
       "targetField": "name"
     },
-    "svgIcon": {
-      "type": "text"
-    },
     "products": {
       "collection": "product",
       "via": "brand"
     },
-    "imgIcon": {
+    "iconSvg": {
+      "type": "text"
+    },
+    "iconImg": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
