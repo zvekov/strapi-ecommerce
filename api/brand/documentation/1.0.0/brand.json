@@ -629,6 +629,26 @@
               }
             }
           },
+          "seo": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "h1": {
+                "type": "string"
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -651,6 +671,26 @@
           },
           "iconSvg": {
             "type": "string"
+          },
+          "seo": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "h1": {
+                "type": "string"
+              }
+            }
           },
           "published_at": {
             "type": "string",

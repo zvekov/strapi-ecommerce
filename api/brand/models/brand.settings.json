@@ -35,6 +35,11 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.meta"
     }
   }
 }

@@ -554,6 +554,9 @@
               "iconImg": {
                 "type": "string"
               },
+              "seo": {
+                "type": "component"
+              },
               "published_at": {
                 "type": "string"
               },
