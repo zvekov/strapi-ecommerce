@@ -553,6 +553,12 @@
                 "seo": {
                   "type": "component"
                 },
+                "products": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
                 "published_at": {
                   "type": "string"
                 },
@@ -648,6 +654,49 @@
                   "updated_by": {
                     "type": "string"
                   }
+                }
+              }
+            }
+          },
+          "products": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "slug": {
+                  "type": "uid"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "seo": {
+                  "type": "component"
+                },
+                "categories": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "baseCategory": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
                 }
               }
             }
@@ -757,6 +806,12 @@
                   }
                 }
               }
+            }
+          },
+          "products": {
+            "type": "array",
+            "items": {
+              "type": "string"
             }
           },
           "published_at": {

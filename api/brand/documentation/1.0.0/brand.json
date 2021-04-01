@@ -550,6 +550,15 @@
                 "seo": {
                   "type": "component"
                 },
+                "categories": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "baseCategory": {
+                  "type": "string"
+                },
                 "published_at": {
                   "type": "string"
                 },
