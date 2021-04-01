@@ -20,6 +20,11 @@
     },
     "subcategories": {
       "collection": "category"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.meta"
     }
   }
 }

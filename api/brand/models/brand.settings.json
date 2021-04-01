@@ -19,8 +19,8 @@
       "targetField": "name"
     },
     "products": {
-      "collection": "product",
-      "via": "brand"
+      "via": "brand",
+      "collection": "product"
     },
     "iconSvg": {
       "type": "text"

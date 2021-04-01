@@ -19,8 +19,13 @@
       "targetField": "name"
     },
     "brand": {
-      "via": "products",
-      "model": "brand"
+      "model": "brand",
+      "via": "products"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.meta"
     }
   }
 }
