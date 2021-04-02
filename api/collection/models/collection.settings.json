@@ -22,6 +22,10 @@
       "type": "component",
       "repeatable": false,
       "component": "seo.meta"
+    },
+    "products": {
+      "via": "collections",
+      "collection": "product"
     }
   }
 }

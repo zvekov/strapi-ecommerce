@@ -671,11 +671,14 @@
                 "slug": {
                   "type": "uid"
                 },
-                "subcategories": {
+                "subCategories": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
+                },
+                "topCategory": {
+                  "type": "string"
                 },
                 "seo": {
                   "type": "component"
@@ -685,6 +688,9 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "mainCategory": {
+                  "type": "boolean"
                 },
                 "published_at": {
                   "type": "string"
@@ -712,11 +718,14 @@
               "slug": {
                 "type": "uid"
               },
-              "subcategories": {
+              "subCategories": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
+              },
+              "topCategory": {
+                "type": "string"
               },
               "seo": {
                 "type": "component"
@@ -727,6 +736,9 @@
                   "type": "string"
                 }
               },
+              "mainCategory": {
+                "type": "boolean"
+              },
               "published_at": {
                 "type": "string"
               },
@@ -735,6 +747,43 @@
               },
               "updated_by": {
                 "type": "string"
+              }
+            }
+          },
+          "collections": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "slug": {
+                  "type": "uid"
+                },
+                "seo": {
+                  "type": "component"
+                },
+                "products": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -850,6 +899,12 @@
           },
           "baseCategory": {
             "type": "string"
+          },
+          "collections": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "published_at": {
             "type": "string",

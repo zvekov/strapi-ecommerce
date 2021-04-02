@@ -34,6 +34,11 @@
     },
     "baseCategory": {
       "model": "category"
+    },
+    "collections": {
+      "collection": "collection",
+      "via": "products",
+      "dominant": true
     }
   }
 }

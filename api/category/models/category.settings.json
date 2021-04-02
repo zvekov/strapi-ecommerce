@@ -18,8 +18,13 @@
       "type": "uid",
       "targetField": "name"
     },
-    "subcategories": {
-      "collection": "category"
+    "subCategories": {
+      "collection": "category",
+      "via": "topCategory"
+    },
+    "topCategory": {
+      "model": "category",
+      "via": "subCategories"
     },
     "seo": {
       "type": "component",
@@ -29,6 +34,10 @@
     "products": {
       "via": "categories",
       "collection": "product"
+    },
+    "mainCategory": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

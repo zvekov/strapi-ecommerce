@@ -528,7 +528,7 @@
           "slug": {
             "type": "uid"
           },
-          "subcategories": {
+          "subCategories": {
             "type": "array",
             "items": {
               "required": [
@@ -544,11 +544,14 @@
                 "slug": {
                   "type": "uid"
                 },
-                "subcategories": {
+                "subCategories": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
+                },
+                "topCategory": {
+                  "type": "string"
                 },
                 "seo": {
                   "type": "component"
@@ -559,6 +562,9 @@
                     "type": "string"
                   }
                 },
+                "mainCategory": {
+                  "type": "boolean"
+                },
                 "published_at": {
                   "type": "string"
                 },
@@ -568,6 +574,52 @@
                 "updated_by": {
                   "type": "string"
                 }
+              }
+            }
+          },
+          "topCategory": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "slug": {
+                "type": "uid"
+              },
+              "subCategories": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "topCategory": {
+                "type": "string"
+              },
+              "seo": {
+                "type": "component"
+              },
+              "products": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "mainCategory": {
+                "type": "boolean"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
@@ -689,6 +741,12 @@
                 "baseCategory": {
                   "type": "string"
                 },
+                "collections": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
                 "published_at": {
                   "type": "string"
                 },
@@ -700,6 +758,10 @@
                 }
               }
             }
+          },
+          "mainCategory": {
+            "type": "boolean",
+            "default": false
           },
           "published_at": {
             "type": "string",
@@ -715,11 +777,14 @@
           "slug": {
             "type": "uid"
           },
-          "subcategories": {
+          "subCategories": {
             "type": "array",
             "items": {
               "type": "string"
             }
+          },
+          "topCategory": {
+            "type": "string"
           },
           "seo": {
             "type": "object",
@@ -813,6 +878,10 @@
             "items": {
               "type": "string"
             }
+          },
+          "mainCategory": {
+            "type": "boolean",
+            "default": false
           },
           "published_at": {
             "type": "string",

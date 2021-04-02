@@ -559,6 +559,12 @@
                 "baseCategory": {
                   "type": "string"
                 },
+                "collections": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
                 "published_at": {
                   "type": "string"
                 },
