@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_settings_socials",
+  "info": {
+    "name": "social",
+    "icon": "user-circle"
+  },
+  "options": {},
+  "attributes": {
+    "network": {
+      "type": "enumeration",
+      "enum": [
+        "instagram",
+        "facebook",
+        "pinterest",
+        "vk",
+        "youtube",
+        "telegram",
+        "twitter",
+        "whatsapp",
+        "viber",
+        "wechat"
+      ]
+    },
+    "value": {
+      "type": "string"
+    }
+  }
+}
