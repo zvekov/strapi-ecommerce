@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/collections": {
+    "/currencies": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Collection"
+                    "$ref": "#/components/schemas/Currency"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Collection"
+          "Currency"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Collection"
+                  "$ref": "#/components/schemas/Currency"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Collection"
+          "Currency"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCollection"
+                "$ref": "#/components/schemas/NewCurrency"
               }
             }
           }
         }
       }
     },
-    "/collections/count": {
+    "/currencies/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Collection"
+          "Currency"
         ],
         "parameters": []
       }
     },
-    "/collections/{id}": {
+    "/currencies/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Collection"
+                  "$ref": "#/components/schemas/Currency"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Collection"
+          "Currency"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Collection"
+                  "$ref": "#/components/schemas/Currency"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Collection"
+          "Currency"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCollection"
+                "$ref": "#/components/schemas/NewCurrency"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Collection"
+          "Currency"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Collection": {
+      "Currency": {
         "required": [
           "id"
         ],
@@ -525,150 +525,22 @@
           "name": {
             "type": "string"
           },
-          "slug": {
-            "type": "uid"
+          "code": {
+            "type": "string"
           },
-          "seo": {
-            "type": "object",
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "h1": {
-                "type": "string"
-              },
-              "image": {
-                "required": [
-                  "id",
-                  "name",
-                  "hash",
-                  "mime",
-                  "size",
-                  "url",
-                  "provider"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "name": {
-                    "type": "string"
-                  },
-                  "alternativeText": {
-                    "type": "string"
-                  },
-                  "caption": {
-                    "type": "string"
-                  },
-                  "width": {
-                    "type": "integer"
-                  },
-                  "height": {
-                    "type": "integer"
-                  },
-                  "formats": {
-                    "type": "object"
-                  },
-                  "hash": {
-                    "type": "string"
-                  },
-                  "ext": {
-                    "type": "string"
-                  },
-                  "mime": {
-                    "type": "string"
-                  },
-                  "size": {
-                    "type": "number"
-                  },
-                  "url": {
-                    "type": "string"
-                  },
-                  "previewUrl": {
-                    "type": "string"
-                  },
-                  "provider": {
-                    "type": "string"
-                  },
-                  "provider_metadata": {
-                    "type": "object"
-                  },
-                  "related": {
-                    "type": "string"
-                  },
-                  "created_by": {
-                    "type": "string"
-                  },
-                  "updated_by": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
+          "symbol": {
+            "type": "string"
           },
-          "products": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "slug": {
-                  "type": "uid"
-                },
-                "brand": {
-                  "type": "string"
-                },
-                "seo": {
-                  "type": "component"
-                },
-                "categories": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "baseCategory": {
-                  "type": "string"
-                },
-                "collections": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "product_type": {
-                  "type": "string"
-                },
-                "variants": {
-                  "type": "component"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
+          "symbolPosition": {
+            "type": "string",
+            "default": "right",
+            "enum": [
+              "right",
+              "left"
+            ]
+          },
+          "value": {
+            "type": "number"
           },
           "published_at": {
             "type": "string",
@@ -676,106 +548,27 @@
           }
         }
       },
-      "NewCollection": {
+      "NewCurrency": {
         "properties": {
           "name": {
             "type": "string"
           },
-          "slug": {
-            "type": "uid"
+          "code": {
+            "type": "string"
           },
-          "seo": {
-            "type": "object",
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "h1": {
-                "type": "string"
-              },
-              "image": {
-                "required": [
-                  "id",
-                  "name",
-                  "hash",
-                  "mime",
-                  "size",
-                  "url",
-                  "provider"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "name": {
-                    "type": "string"
-                  },
-                  "alternativeText": {
-                    "type": "string"
-                  },
-                  "caption": {
-                    "type": "string"
-                  },
-                  "width": {
-                    "type": "integer"
-                  },
-                  "height": {
-                    "type": "integer"
-                  },
-                  "formats": {
-                    "type": "object"
-                  },
-                  "hash": {
-                    "type": "string"
-                  },
-                  "ext": {
-                    "type": "string"
-                  },
-                  "mime": {
-                    "type": "string"
-                  },
-                  "size": {
-                    "type": "number"
-                  },
-                  "url": {
-                    "type": "string"
-                  },
-                  "previewUrl": {
-                    "type": "string"
-                  },
-                  "provider": {
-                    "type": "string"
-                  },
-                  "provider_metadata": {
-                    "type": "object"
-                  },
-                  "related": {
-                    "type": "string"
-                  },
-                  "created_by": {
-                    "type": "string"
-                  },
-                  "updated_by": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
+          "symbol": {
+            "type": "string"
           },
-          "products": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "symbolPosition": {
+            "type": "string",
+            "default": "right",
+            "enum": [
+              "right",
+              "left"
+            ]
+          },
+          "value": {
+            "type": "number"
           },
           "published_at": {
             "type": "string",
@@ -793,7 +586,7 @@
   },
   "tags": [
     {
-      "name": "Collection"
+      "name": "Currency"
     }
   ]
 }

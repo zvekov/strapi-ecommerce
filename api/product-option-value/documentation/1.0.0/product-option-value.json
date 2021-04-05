@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/collections": {
+    "/product-option-values": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -10,9 +10,10 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Collection"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
                   }
                 }
               }
@@ -51,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Collection"
+          "Product-option-value"
         ],
         "parameters": [
           {
@@ -201,72 +202,9 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Collection"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Collection"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewCollection"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/collections/count": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
                   "properties": {
-                    "count": {
-                      "type": "integer"
+                    "foo": {
+                      "type": "string"
                     }
                   }
                 }
@@ -306,12 +244,22 @@
         },
         "summary": "",
         "tags": [
-          "Collection"
+          "Product-option-value"
         ],
-        "parameters": []
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewProduct-option-value"
+              }
+            }
+          }
+        }
       }
     },
-    "/collections/{id}": {
+    "/product-option-values/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +269,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Collection"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -359,7 +311,64 @@
         },
         "summary": "",
         "tags": [
-          "Collection"
+          "Product-option-value"
+        ],
+        "parameters": []
+      }
+    },
+    "/product-option-values/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Product-option-value"
         ],
         "parameters": [
           {
@@ -383,7 +392,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Collection"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -421,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Collection"
+          "Product-option-value"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCollection"
+                "$ref": "#/components/schemas/NewProduct-option-value"
               }
             }
           }
@@ -495,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Collection"
+          "Product-option-value"
         ],
         "parameters": [
           {
@@ -514,7 +527,7 @@
   },
   "components": {
     "schemas": {
-      "Collection": {
+      "Product-option-value": {
         "required": [
           "id"
         ],
@@ -522,14 +535,10 @@
           "id": {
             "type": "string"
           },
-          "name": {
+          "value": {
             "type": "string"
           },
-          "slug": {
-            "type": "uid"
-          },
-          "seo": {
-            "type": "object",
+          "product_option": {
             "required": [
               "id"
             ],
@@ -537,249 +546,32 @@
               "id": {
                 "type": "string"
               },
-              "title": {
+              "name": {
                 "type": "string"
               },
-              "description": {
-                "type": "string"
-              },
-              "h1": {
-                "type": "string"
-              },
-              "image": {
-                "required": [
-                  "id",
-                  "name",
-                  "hash",
-                  "mime",
-                  "size",
-                  "url",
-                  "provider"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "name": {
-                    "type": "string"
-                  },
-                  "alternativeText": {
-                    "type": "string"
-                  },
-                  "caption": {
-                    "type": "string"
-                  },
-                  "width": {
-                    "type": "integer"
-                  },
-                  "height": {
-                    "type": "integer"
-                  },
-                  "formats": {
-                    "type": "object"
-                  },
-                  "hash": {
-                    "type": "string"
-                  },
-                  "ext": {
-                    "type": "string"
-                  },
-                  "mime": {
-                    "type": "string"
-                  },
-                  "size": {
-                    "type": "number"
-                  },
-                  "url": {
-                    "type": "string"
-                  },
-                  "previewUrl": {
-                    "type": "string"
-                  },
-                  "provider": {
-                    "type": "string"
-                  },
-                  "provider_metadata": {
-                    "type": "object"
-                  },
-                  "related": {
-                    "type": "string"
-                  },
-                  "created_by": {
-                    "type": "string"
-                  },
-                  "updated_by": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
-          "products": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "slug": {
-                  "type": "uid"
-                },
-                "brand": {
-                  "type": "string"
-                },
-                "seo": {
-                  "type": "component"
-                },
-                "categories": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "baseCategory": {
-                  "type": "string"
-                },
-                "collections": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "product_type": {
-                  "type": "string"
-                },
-                "variants": {
-                  "type": "component"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
+              "product_option_values": {
+                "type": "array",
+                "items": {
                   "type": "string"
                 }
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
           }
         }
       },
-      "NewCollection": {
+      "NewProduct-option-value": {
         "properties": {
-          "name": {
+          "value": {
             "type": "string"
           },
-          "slug": {
-            "type": "uid"
-          },
-          "seo": {
-            "type": "object",
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "h1": {
-                "type": "string"
-              },
-              "image": {
-                "required": [
-                  "id",
-                  "name",
-                  "hash",
-                  "mime",
-                  "size",
-                  "url",
-                  "provider"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "name": {
-                    "type": "string"
-                  },
-                  "alternativeText": {
-                    "type": "string"
-                  },
-                  "caption": {
-                    "type": "string"
-                  },
-                  "width": {
-                    "type": "integer"
-                  },
-                  "height": {
-                    "type": "integer"
-                  },
-                  "formats": {
-                    "type": "object"
-                  },
-                  "hash": {
-                    "type": "string"
-                  },
-                  "ext": {
-                    "type": "string"
-                  },
-                  "mime": {
-                    "type": "string"
-                  },
-                  "size": {
-                    "type": "number"
-                  },
-                  "url": {
-                    "type": "string"
-                  },
-                  "previewUrl": {
-                    "type": "string"
-                  },
-                  "provider": {
-                    "type": "string"
-                  },
-                  "provider_metadata": {
-                    "type": "object"
-                  },
-                  "related": {
-                    "type": "string"
-                  },
-                  "created_by": {
-                    "type": "string"
-                  },
-                  "updated_by": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
-          "products": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
+          "product_option": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"
@@ -791,9 +583,5 @@
       }
     }
   },
-  "tags": [
-    {
-      "name": "Collection"
-    }
-  ]
+  "tags": []
 }

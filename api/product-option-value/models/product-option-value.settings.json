@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_option_values",
+  "info": {
+    "name": "productOptionValue",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "value": {
+      "type": "string"
+    },
+    "product_option": {
+      "via": "product_option_values",
+      "model": "product-option"
+    }
+  }
+}

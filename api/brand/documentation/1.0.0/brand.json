@@ -565,6 +565,12 @@
                     "type": "string"
                   }
                 },
+                "product_type": {
+                  "type": "string"
+                },
+                "variants": {
+                  "type": "component"
+                },
                 "published_at": {
                   "type": "string"
                 },

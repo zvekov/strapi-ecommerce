@@ -39,6 +39,15 @@
       "collection": "collection",
       "via": "products",
       "dominant": true
+    },
+    "product_type": {
+      "model": "product-type",
+      "via": "products"
+    },
+    "variants": {
+      "type": "component",
+      "repeatable": true,
+      "component": "product.variant"
     }
   }
 }

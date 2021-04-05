@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_product_options",
+  "info": {
+    "name": "options",
+    "icon": "apple-alt",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "product_option": {
+      "model": "product-option"
+    },
+    "product_option_value": {
+      "model": "product-option-value"
+    }
+  }
+}

@@ -787,6 +787,326 @@
               }
             }
           },
+          "product_type": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "products": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "product_options": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "variants": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "price": {
+                  "type": "number"
+                },
+                "basePrice": {
+                  "type": "number"
+                },
+                "basePriceCurrency": {
+                  "required": [
+                    "id"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "type": "string"
+                    },
+                    "symbol": {
+                      "type": "string"
+                    },
+                    "symbolPosition": {
+                      "type": "string",
+                      "enum": [
+                        "right",
+                        "left"
+                      ]
+                    },
+                    "value": {
+                      "type": "number"
+                    },
+                    "published_at": {
+                      "type": "string"
+                    },
+                    "created_by": {
+                      "type": "string"
+                    },
+                    "updated_by": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "options": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "id"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "product_option": {
+                        "required": [
+                          "id"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "product_option_values": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "created_by": {
+                            "type": "string"
+                          },
+                          "updated_by": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "product_option_value": {
+                        "required": [
+                          "id"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "value": {
+                            "type": "string"
+                          },
+                          "product_option": {
+                            "type": "string"
+                          },
+                          "created_by": {
+                            "type": "string"
+                          },
+                          "updated_by": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "data": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "sku"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "sku": {
+                      "type": "string"
+                    },
+                    "upc": {
+                      "type": "string"
+                    },
+                    "ean": {
+                      "type": "string"
+                    },
+                    "jan": {
+                      "type": "string"
+                    },
+                    "isbn": {
+                      "type": "string"
+                    },
+                    "mpn": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "oldPrice": {
+                  "type": "number"
+                },
+                "cover": {
+                  "required": [
+                    "id",
+                    "name",
+                    "hash",
+                    "mime",
+                    "size",
+                    "url",
+                    "provider"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "alternativeText": {
+                      "type": "string"
+                    },
+                    "caption": {
+                      "type": "string"
+                    },
+                    "width": {
+                      "type": "integer"
+                    },
+                    "height": {
+                      "type": "integer"
+                    },
+                    "formats": {
+                      "type": "object"
+                    },
+                    "hash": {
+                      "type": "string"
+                    },
+                    "ext": {
+                      "type": "string"
+                    },
+                    "mime": {
+                      "type": "string"
+                    },
+                    "size": {
+                      "type": "number"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "previewUrl": {
+                      "type": "string"
+                    },
+                    "provider": {
+                      "type": "string"
+                    },
+                    "provider_metadata": {
+                      "type": "object"
+                    },
+                    "related": {
+                      "type": "string"
+                    },
+                    "created_by": {
+                      "type": "string"
+                    },
+                    "updated_by": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "gallery": {
+                  "type": "array",
+                  "items": {
+                    "required": [
+                      "id",
+                      "name",
+                      "hash",
+                      "mime",
+                      "size",
+                      "url",
+                      "provider"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "alternativeText": {
+                        "type": "string"
+                      },
+                      "caption": {
+                        "type": "string"
+                      },
+                      "width": {
+                        "type": "integer"
+                      },
+                      "height": {
+                        "type": "integer"
+                      },
+                      "formats": {
+                        "type": "object"
+                      },
+                      "hash": {
+                        "type": "string"
+                      },
+                      "ext": {
+                        "type": "string"
+                      },
+                      "mime": {
+                        "type": "string"
+                      },
+                      "size": {
+                        "type": "number"
+                      },
+                      "url": {
+                        "type": "string"
+                      },
+                      "previewUrl": {
+                        "type": "string"
+                      },
+                      "provider": {
+                        "type": "string"
+                      },
+                      "provider_metadata": {
+                        "type": "object"
+                      },
+                      "related": {
+                        "type": "string"
+                      },
+                      "created_by": {
+                        "type": "string"
+                      },
+                      "updated_by": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -904,6 +1224,298 @@
             "type": "array",
             "items": {
               "type": "string"
+            }
+          },
+          "product_type": {
+            "type": "string"
+          },
+          "variants": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "price": {
+                  "type": "number"
+                },
+                "basePrice": {
+                  "type": "number"
+                },
+                "basePriceCurrency": {
+                  "required": [
+                    "id"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "type": "string"
+                    },
+                    "symbol": {
+                      "type": "string"
+                    },
+                    "symbolPosition": {
+                      "type": "string",
+                      "enum": [
+                        "right",
+                        "left"
+                      ]
+                    },
+                    "value": {
+                      "type": "number"
+                    },
+                    "published_at": {
+                      "type": "string"
+                    },
+                    "created_by": {
+                      "type": "string"
+                    },
+                    "updated_by": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "options": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "id"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "product_option": {
+                        "required": [
+                          "id"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "product_option_values": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "created_by": {
+                            "type": "string"
+                          },
+                          "updated_by": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "product_option_value": {
+                        "required": [
+                          "id"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "value": {
+                            "type": "string"
+                          },
+                          "product_option": {
+                            "type": "string"
+                          },
+                          "created_by": {
+                            "type": "string"
+                          },
+                          "updated_by": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "data": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "sku"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "sku": {
+                      "type": "string"
+                    },
+                    "upc": {
+                      "type": "string"
+                    },
+                    "ean": {
+                      "type": "string"
+                    },
+                    "jan": {
+                      "type": "string"
+                    },
+                    "isbn": {
+                      "type": "string"
+                    },
+                    "mpn": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "oldPrice": {
+                  "type": "number"
+                },
+                "cover": {
+                  "required": [
+                    "id",
+                    "name",
+                    "hash",
+                    "mime",
+                    "size",
+                    "url",
+                    "provider"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "alternativeText": {
+                      "type": "string"
+                    },
+                    "caption": {
+                      "type": "string"
+                    },
+                    "width": {
+                      "type": "integer"
+                    },
+                    "height": {
+                      "type": "integer"
+                    },
+                    "formats": {
+                      "type": "object"
+                    },
+                    "hash": {
+                      "type": "string"
+                    },
+                    "ext": {
+                      "type": "string"
+                    },
+                    "mime": {
+                      "type": "string"
+                    },
+                    "size": {
+                      "type": "number"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "previewUrl": {
+                      "type": "string"
+                    },
+                    "provider": {
+                      "type": "string"
+                    },
+                    "provider_metadata": {
+                      "type": "object"
+                    },
+                    "related": {
+                      "type": "string"
+                    },
+                    "created_by": {
+                      "type": "string"
+                    },
+                    "updated_by": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "gallery": {
+                  "type": "array",
+                  "items": {
+                    "required": [
+                      "id",
+                      "name",
+                      "hash",
+                      "mime",
+                      "size",
+                      "url",
+                      "provider"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "alternativeText": {
+                        "type": "string"
+                      },
+                      "caption": {
+                        "type": "string"
+                      },
+                      "width": {
+                        "type": "integer"
+                      },
+                      "height": {
+                        "type": "integer"
+                      },
+                      "formats": {
+                        "type": "object"
+                      },
+                      "hash": {
+                        "type": "string"
+                      },
+                      "ext": {
+                        "type": "string"
+                      },
+                      "mime": {
+                        "type": "string"
+                      },
+                      "size": {
+                        "type": "number"
+                      },
+                      "url": {
+                        "type": "string"
+                      },
+                      "previewUrl": {
+                        "type": "string"
+                      },
+                      "provider": {
+                        "type": "string"
+                      },
+                      "provider_metadata": {
+                        "type": "object"
+                      },
+                      "related": {
+                        "type": "string"
+                      },
+                      "created_by": {
+                        "type": "string"
+                      },
+                      "updated_by": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
             }
           },
           "published_at": {
