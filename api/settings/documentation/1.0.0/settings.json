@@ -349,6 +349,30 @@
                 }
               }
             }
+          },
+          "contacts": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "phone": {
+                "type": "string"
+              },
+              "address": {
+                "type": "string"
+              },
+              "coords": {
+                "type": "string",
+                "default": "52.896917, 30.042062"
+              }
+            }
           }
         }
       },
@@ -383,6 +407,30 @@
                 "value": {
                   "type": "string"
                 }
+              }
+            }
+          },
+          "contacts": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "phone": {
+                "type": "string"
+              },
+              "address": {
+                "type": "string"
+              },
+              "coords": {
+                "type": "string",
+                "default": "52.896917, 30.042062"
               }
             }
           },
