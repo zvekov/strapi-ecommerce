@@ -38,6 +38,13 @@
     "mainCategory": {
       "type": "boolean",
       "default": false
+    },
+    "navigation": {
+      "model": "navigationitem",
+      "plugin": "navigation",
+      "via": "related",
+      "configurable": false,
+      "hidden": true
     }
   }
 }

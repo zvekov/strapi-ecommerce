@@ -10461,10 +10461,10 @@ strapi-plugin-graphql@3.5.4:
     pluralize "^8.0.0"
     strapi-utils "3.5.4"
 
-strapi-plugin-navigation@^1.0.0-beta.19:
-  version "1.0.0-beta.19"
-  resolved "https://registry.yarnpkg.com/strapi-plugin-navigation/-/strapi-plugin-navigation-1.0.0-beta.19.tgz#cb10f7ec6c61a321eb3f7817b885fcccf2a042ff"
-  integrity sha512-B9Bw12vWtaaydJ6GzoEKzYWJYIBxgQUIA7EUtr2mHOIQ+jzK2nR7PiIJ1DXCLC/8z7YwgqcRc0pQ92v/njDbwA==
+strapi-plugin-navigation@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/strapi-plugin-navigation/-/strapi-plugin-navigation-1.0.0.tgz#1db5beb8fdb7fc34df722348df51c4a82d3a3d63"
+  integrity sha512-1j80mzXX/V6SErtaEpg3NDxaTNciTXX0Ck4cE1itLvpM9DBp06PA3kTfduYTyzRh5n2pnuf7Q2UvKCKuF45RFQ==
   dependencies:
     "@types/uuid" "^8.3.0"
     bad-words "^3.0.3"

@@ -22,7 +22,7 @@
     "strapi-plugin-documentation": "3.5.4",
     "strapi-plugin-email": "3.5.4",
     "strapi-plugin-graphql": "3.5.4",
-    "strapi-plugin-navigation": "^1.0.0-beta.19",
+    "strapi-plugin-navigation": "^1.0.0",
     "strapi-plugin-upload": "3.5.4",
     "strapi-plugin-users-permissions": "3.5.4",
     "strapi-provider-upload-cloudinary": "^3.5.4",

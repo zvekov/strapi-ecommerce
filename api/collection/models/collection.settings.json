@@ -26,6 +26,13 @@
     "products": {
       "via": "collections",
       "collection": "product"
+    },
+    "navigation": {
+      "model": "navigationitem",
+      "plugin": "navigation",
+      "via": "related",
+      "configurable": false,
+      "hidden": true
     }
   }
 }
