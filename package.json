@@ -2,7 +2,7 @@
   "name": "nuxt-storeback",
   "private": true,
   "version": "0.1.0",
-  "description": "A Strapi application",
+  "description": "A Strapi Nuxt application",
   "scripts": {
     "dev": "strapi develop",
     "start": "strapi start",
