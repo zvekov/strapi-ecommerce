@@ -1,9 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "page",
+  "collectionName": "pages",
   "info": {
-    "name": "Page",
-    "description": ""
+    "name": "page"
   },
   "options": {
     "increments": true,

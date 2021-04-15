@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "04/15/2021 8:46:28 PM"
+    "x-generation-date": "04/15/2021 8:55:53 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -2603,16 +2603,16 @@
     "/pages": {
       "get": {
         "deprecated": false,
-        "description": "Find all the pages's records",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve pages document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Pages"
+                    "$ref": "#/components/schemas/Page"
                   }
                 }
               }
@@ -2651,7 +2651,7 @@
         },
         "summary": "",
         "tags": [
-          "Pages"
+          "Page"
         ],
         "parameters": [
           {
@@ -2794,14 +2794,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new pages record",
+        "description": "Create a new record",
         "responses": {
           "200": {
-            "description": "Retrieve pages document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Pages"
+                  "$ref": "#/components/schemas/Page"
                 }
               }
             }
@@ -2839,7 +2839,7 @@
         },
         "summary": "",
         "tags": [
-          "Pages"
+          "Page"
         ],
         "requestBody": {
           "description": "",
@@ -2847,7 +2847,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewPages"
+                "$ref": "#/components/schemas/NewPage"
               }
             }
           }
@@ -2857,10 +2857,10 @@
     "/pages/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of pages documents",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve pages document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -2906,7 +2906,7 @@
         },
         "summary": "",
         "tags": [
-          "Pages"
+          "Page"
         ],
         "parameters": []
       }
@@ -2914,14 +2914,14 @@
     "/pages/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one pages record",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve pages document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Pages"
+                  "$ref": "#/components/schemas/Page"
                 }
               }
             }
@@ -2959,7 +2959,7 @@
         },
         "summary": "",
         "tags": [
-          "Pages"
+          "Page"
         ],
         "parameters": [
           {
@@ -2976,14 +2976,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single pages record",
+        "description": "Update a record",
         "responses": {
           "200": {
-            "description": "Retrieve pages document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Pages"
+                  "$ref": "#/components/schemas/Page"
                 }
               }
             }
@@ -3021,7 +3021,7 @@
         },
         "summary": "",
         "tags": [
-          "Pages"
+          "Page"
         ],
         "requestBody": {
           "description": "",
@@ -3029,7 +3029,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewPages"
+                "$ref": "#/components/schemas/NewPage"
               }
             }
           }
@@ -3049,10 +3049,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single pages record",
+        "description": "Delete a record",
         "responses": {
           "200": {
-            "description": "deletes a single pages based on the ID supplied",
+            "description": "deletes a single record based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -3095,7 +3095,7 @@
         },
         "summary": "",
         "tags": [
-          "Pages"
+          "Page"
         ],
         "parameters": [
           {
@@ -8972,7 +8972,7 @@
           }
         }
       },
-      "Pages": {
+      "Page": {
         "required": [
           "id"
         ],
@@ -9079,7 +9079,7 @@
           }
         }
       },
-      "NewPages": {
+      "NewPage": {
         "properties": {
           "name": {
             "type": "string"
@@ -10877,7 +10877,7 @@
       "name": "Currency"
     },
     {
-      "name": "Pages"
+      "name": "Page"
     },
     {
       "name": "Product"
