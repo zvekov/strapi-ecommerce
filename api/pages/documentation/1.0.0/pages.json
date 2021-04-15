@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/categories": {
+    "/pages": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the pages's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve pages document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Category"
+                    "$ref": "#/components/schemas/Pages"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Pages"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new pages record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve pages document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Category"
+                  "$ref": "#/components/schemas/Pages"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Pages"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCategory"
+                "$ref": "#/components/schemas/NewPages"
               }
             }
           }
         }
       }
     },
-    "/categories/count": {
+    "/pages/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the numver of pages documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve pages document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Pages"
         ],
         "parameters": []
       }
     },
-    "/categories/{id}": {
+    "/pages/{id}": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find one pages record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve pages document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Category"
+                  "$ref": "#/components/schemas/Pages"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Pages"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single pages record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve pages document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Category"
+                  "$ref": "#/components/schemas/Pages"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Pages"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCategory"
+                "$ref": "#/components/schemas/NewPages"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single pages record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single pages based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Pages"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Category": {
+      "Pages": {
         "required": [
           "id"
         ],
@@ -528,107 +528,6 @@
           "slug": {
             "type": "uid"
           },
-          "subCategories": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "slug": {
-                  "type": "uid"
-                },
-                "subCategories": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "topCategory": {
-                  "type": "string"
-                },
-                "seo": {
-                  "type": "component"
-                },
-                "products": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "mainCategory": {
-                  "type": "boolean"
-                },
-                "navigation": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "topCategory": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "slug": {
-                "type": "uid"
-              },
-              "subCategories": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "topCategory": {
-                "type": "string"
-              },
-              "seo": {
-                "type": "component"
-              },
-              "products": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "mainCategory": {
-                "type": "boolean"
-              },
-              "navigation": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "seo": {
             "type": "object",
             "required": [
@@ -713,122 +612,6 @@
                     "type": "string"
                   }
                 }
-              }
-            }
-          },
-          "products": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "slug": {
-                  "type": "uid"
-                },
-                "brand": {
-                  "type": "string"
-                },
-                "seo": {
-                  "type": "component"
-                },
-                "categories": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "baseCategory": {
-                  "type": "string"
-                },
-                "collections": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "product_type": {
-                  "type": "string"
-                },
-                "variants": {
-                  "type": "component"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "mainCategory": {
-            "type": "boolean",
-            "default": false
-          },
-          "navigation": {
-            "required": [
-              "id",
-              "title"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              },
-              "type": {
-                "type": "string",
-                "enum": [
-                  "INTERNAL",
-                  "EXTERNAL"
-                ]
-              },
-              "path": {
-                "type": "string"
-              },
-              "externalPath": {
-                "type": "string"
-              },
-              "uiRouterKey": {
-                "type": "string"
-              },
-              "menuAttached": {
-                "type": "boolean"
-              },
-              "order": {
-                "type": "integer"
-              },
-              "related": {
-                "type": "string"
-              },
-              "parent": {
-                "type": "string"
-              },
-              "master": {
-                "type": "string"
-              },
-              "audience": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
               }
             }
           },
@@ -838,22 +621,13 @@
           }
         }
       },
-      "NewCategory": {
+      "NewPages": {
         "properties": {
           "name": {
             "type": "string"
           },
           "slug": {
             "type": "uid"
-          },
-          "subCategories": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "topCategory": {
-            "type": "string"
           },
           "seo": {
             "type": "object",
@@ -941,19 +715,6 @@
                 }
               }
             }
-          },
-          "products": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "mainCategory": {
-            "type": "boolean",
-            "default": false
-          },
-          "navigation": {
-            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -971,7 +732,7 @@
   },
   "tags": [
     {
-      "name": "Category"
+      "name": "Pages"
     }
   ]
 }

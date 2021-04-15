@@ -692,6 +692,9 @@
                 "mainCategory": {
                   "type": "boolean"
                 },
+                "navigation": {
+                  "type": "string"
+                },
                 "published_at": {
                   "type": "string"
                 },
@@ -739,6 +742,9 @@
               "mainCategory": {
                 "type": "boolean"
               },
+              "navigation": {
+                "type": "string"
+              },
               "published_at": {
                 "type": "string"
               },
@@ -774,6 +780,9 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "navigation": {
+                  "type": "string"
                 },
                 "published_at": {
                   "type": "string"
