@@ -10,16 +10,31 @@
     "timestamps": true,
     "draftAndPublish": false
   },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "social": {
       "type": "component",
       "repeatable": true,
-      "component": "settings.social"
+      "component": "settings.social",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "contacts": {
       "type": "component",
       "repeatable": false,
-      "component": "settings.contacts"
+      "component": "settings.contacts",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

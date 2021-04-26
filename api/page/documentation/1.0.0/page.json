@@ -615,6 +615,63 @@
               }
             }
           },
+          "navigation": {
+            "required": [
+              "id",
+              "title"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string",
+                "enum": [
+                  "INTERNAL",
+                  "EXTERNAL"
+                ]
+              },
+              "path": {
+                "type": "string"
+              },
+              "externalPath": {
+                "type": "string"
+              },
+              "uiRouterKey": {
+                "type": "string"
+              },
+              "menuAttached": {
+                "type": "boolean"
+              },
+              "order": {
+                "type": "integer"
+              },
+              "related": {
+                "type": "string"
+              },
+              "parent": {
+                "type": "string"
+              },
+              "master": {
+                "type": "string"
+              },
+              "audience": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -715,6 +772,9 @@
                 }
               }
             }
+          },
+          "navigation": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
