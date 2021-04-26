@@ -658,6 +658,15 @@
                 "variants": {
                   "type": "component"
                 },
+                "localizations": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "locale": {
+                  "type": "string"
+                },
                 "published_at": {
                   "type": "string"
                 },
