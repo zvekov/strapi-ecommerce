@@ -1250,6 +1250,12 @@
                 "type": "string"
               }
             }
+          },
+          "firstname": {
+            "type": "string"
+          },
+          "lastname": {
+            "type": "string"
           }
         }
       },
@@ -1290,6 +1296,12 @@
             "default": false
           },
           "role": {
+            "type": "string"
+          },
+          "firstname": {
+            "type": "string"
+          },
+          "lastname": {
             "type": "string"
           },
           "created_by": {
