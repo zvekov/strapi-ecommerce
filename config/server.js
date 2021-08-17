@@ -2,7 +2,7 @@ module.exports = ({ env }) => ({
   host: env('HOST', '0.0.0.0'),
   port: env.int('PORT', 1337),
   cron: { enabled: false },
-  url: 'https://nuxt-storeback-strapi.herokuapp.com',
+  url: env('API_URL', 'https://localhost:1337'),
   admin: {
     autoOpen: false,
     auth: {
